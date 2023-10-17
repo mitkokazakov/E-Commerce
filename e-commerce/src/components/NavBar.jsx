@@ -23,7 +23,7 @@ export const NavBar = () => {
     }
 
     return (
-        <div className='w-full h-[100px] bg-gray-200 shadow-2xl flex justify-between items-center pl-10 '>
+        <div className='w-full h-[100px] bg-gray-200 shadow-2xl fixed flex justify-between items-center pl-10 z-10'>
             <div className=' cursor-pointer'>
                 <img src={logoImage} alt="Logo Image" />
             </div>
