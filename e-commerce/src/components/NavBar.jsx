@@ -11,6 +11,7 @@ export const NavBar = () => {
         sideMenu.current.classList.remove('opacity-0');
         sideMenu.current.classList.add('opacity-100');
         sideMenu.current.classList.remove('-z-10');
+        sideMenu.current.classList.remove('pointer-events-none');
         sideMenu.current.classList.add('z-10');
     }
 
@@ -20,6 +21,7 @@ export const NavBar = () => {
         sideMenu.current.classList.add('opacity-0');
         sideMenu.current.classList.remove('z-10');
         sideMenu.current.classList.add('-z-10');
+        sideMenu.current.classList.add('pointer-events-none');
     }
 
     return (
@@ -44,7 +46,7 @@ export const NavBar = () => {
                 <i id='burger' className="fa-solid fa-bars max-sm:text-2xl max-sm:mr-5 max-sm:block cursor-pointer hidden" onClick={OnCLickBurgerMenu}></i>
             </div>
 
-            <div ref={sideMenu} className='w-2/3 min-h-screen bg-gray-200 fixed right-0 top-0 opacity-0 -z-10 transition-all duration-500'>
+            <div ref={sideMenu} className='w-2/3 min-h-screen bg-gray-200 fixed right-0 top-0 opacity-0 -z-10 transition-all duration-500 pointer-events-none'>
 
                 <ul className='flex flex-col justify-start items-start gap-10 px-10 py-10'>
                     <li id='closebtn' className='tracking-widest font-bold text-lg' onClick={OnClickCloseBtn}>
