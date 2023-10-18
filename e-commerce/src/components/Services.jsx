@@ -9,7 +9,7 @@ import feature6 from '../images/features6.png';
 
 export const Services = () => {
   return (
-    <div className='px-1 py-5 bg-gradient-to-b from-white to-slate-300 w-full flex flex-wrap justify-center items-center gap-5 md:flex-nowrap md:px-10 md:py-16'>
+    <div className='px-1 py-5 bg-gradient-to-b from-white to-slate-300 w-full flex flex-wrap justify-center items-center gap-5 lg:flex-nowrap lg:px-10 lg:py-16'>
         
         <div className='p-3 flex flex-col justify-center items-center gap-3 bg-transparent border-2 border-slate-200 rounded-md w-2/5 h-[170px] shadow-xl'>
             <img className='w-[90px] h-[90px]' src={feature1} alt="" />
