@@ -4,7 +4,7 @@ import product1 from '../images/product1.jpg';
 
 export const Featured = () => {
     return (
-        <div className=' bg-slate-300 w-full'>
+        <div className=' bg-slate-300 w-full pb-10'>
 
             <div className='text-center py-10'>
                 <h1 className='font-bold text-4xl mb-5'>Featured Products</h1>
@@ -12,7 +12,7 @@ export const Featured = () => {
                 <p className=' text-slate-100 text-xl px-5'>Summer Collection New Modern Design</p>
             </div>
 
-            <div className=' flex flex-wrap justify-center items-center gap-5 px-8'>
+            <div className=' flex flex-wrap justify-center items-center gap-5 px-8 pb-10'>
 
                 <div className='border-slate-200 border-2 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%]'>
 
