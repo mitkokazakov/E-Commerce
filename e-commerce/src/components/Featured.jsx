@@ -14,7 +14,7 @@ export const Featured = () => {
 
             <div className=' flex flex-wrap justify-center items-center gap-5 px-8 pb-10'>
 
-                <div className='border-slate-200 border-2 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%]'>
+                <div className='border-slate-200 border-2 rounded-2xl shadow-xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%] hover:scale-105 transition-all duration-500'>
 
                     <div className='w-full relative shadow-md rounded-2xl cursor-pointer'>
                         <img className='w-full h-full rounded-2xl' src={product1} alt="" />
@@ -39,7 +39,7 @@ export const Featured = () => {
 
                 </div>
 
-                <div className='border-slate-200 border-2 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%]'>
+                <div className='border-slate-200 border-2 rounded-2xl shadow-xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%] hover:scale-105 transition-all duration-500'>
 
                     <div className='w-full relative shadow-md rounded-2xl cursor-pointer'>
                         <img className='w-full h-full rounded-2xl' src={product1} alt="" />
@@ -64,7 +64,7 @@ export const Featured = () => {
 
                 </div>
 
-                <div className='border-slate-200 border-2 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%]'>
+                <div className='border-slate-200 border-2 rounded-2xl shadow-xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%] hover:scale-105 transition-all duration-500'>
 
                     <div className='w-full relative shadow-md rounded-2xl cursor-pointer'>
                         <img className='w-full h-full rounded-2xl' src={product1} alt="" />
@@ -89,7 +89,7 @@ export const Featured = () => {
 
                 </div>
 
-                <div className='border-slate-200 border-2 rounded-2xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%]'>
+                <div className='border-slate-200 border-2 rounded-2xl shadow-xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%] hover:scale-105 transition-all duration-500'>
 
                     <div className='w-full relative shadow-md rounded-2xl cursor-pointer'>
                         <img className='w-full h-full rounded-2xl' src={product1} alt="" />
