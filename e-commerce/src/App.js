@@ -1,6 +1,6 @@
 import './App.css';
 import { Discount } from './components/Discount';
-import { Featured } from './components/Featured';
+import { FeaturedAndArrivals } from './components/FeaturedAndArrivals';
 import { Hero } from './components/Hero';
 import { NavBar } from './components/NavBar';
 import { Services } from './components/Services';
@@ -12,8 +12,9 @@ function App() {
       <NavBar></NavBar>
       <Hero></Hero>
       <Services></Services>
-      <Featured></Featured>
+      <FeaturedAndArrivals title="Featured Prodcuts" descr="Summer Collection New Modern Design"></FeaturedAndArrivals>
       <Discount></Discount>
+      <FeaturedAndArrivals title="New Arrivals" descr="Summer Collection New Modern Design"></FeaturedAndArrivals>
     </div>
   );
 }

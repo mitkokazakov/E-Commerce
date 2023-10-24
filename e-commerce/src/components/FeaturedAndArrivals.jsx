@@ -2,14 +2,14 @@ import React from 'react'
 
 import product1 from '../images/product1.jpg';
 
-export const Featured = () => {
+export const FeaturedAndArrivals = ({title, descr}) => {
     return (
         <div className=' bg-slate-300 w-full pb-10'>
 
             <div className='text-center py-10'>
-                <h1 className='font-bold text-4xl mb-5'>Featured Products</h1>
+                <h1 className='font-bold text-4xl mb-5 tracking-widest'>{title}</h1>
 
-                <p className=' text-slate-100 text-xl px-5'>Summer Collection New Modern Design</p>
+                <p className=' text-slate-100 text-xl px-5'>{descr}</p>
             </div>
 
             <div className=' flex flex-wrap justify-center items-center gap-5 px-8 pb-10'>
@@ -32,7 +32,7 @@ export const Featured = () => {
                             <p className='text-teal-600 font-bold tracking-widest'>$78</p>
 
                             <div className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
-                                <i class="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
+                                <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
                             </div>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ export const Featured = () => {
                             <p className='text-teal-600 font-bold tracking-widest'>$78</p>
 
                             <div className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
-                                <i class="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
+                                <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@ export const Featured = () => {
                             <p className='text-teal-600 font-bold tracking-widest'>$78</p>
 
                             <div className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
-                                <i class="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
+                                <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ export const Featured = () => {
                             <p className='text-teal-600 font-bold tracking-widest'>$78</p>
 
                             <div className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
-                                <i class="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
+                                <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
                             </div>
                         </div>
                     </div>
