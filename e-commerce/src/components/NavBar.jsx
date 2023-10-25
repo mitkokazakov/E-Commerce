@@ -1,12 +1,14 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 import logoImage from '../images/logo.png';
 
 export const NavBar = () => {
 
     let sideMenu = useRef();
+    let mensDropdown = useRef();
+    let mensSideDropdown = useRef();
 
-    const OnCLickBurgerMenu = () =>{
+    const OnCLickBurgerMenu = () => {
 
         sideMenu.current.classList.remove('opacity-0');
         sideMenu.current.classList.add('opacity-100');
@@ -15,7 +17,7 @@ export const NavBar = () => {
         sideMenu.current.classList.add('z-10');
     }
 
-    const OnClickCloseBtn = () =>{
+    const OnClickCloseBtn = () => {
 
         sideMenu.current.classList.remove('opacity-100');
         sideMenu.current.classList.add('opacity-0');
@@ -24,16 +26,64 @@ export const NavBar = () => {
         sideMenu.current.classList.add('pointer-events-none');
     }
 
+    const OnClickMens = () => {
+
+        if (mensDropdown.current.classList.contains('hidden')) {
+            mensDropdown.current.classList.remove('hidden');
+        }
+        else {
+            mensDropdown.current.classList.add('hidden');
+        }
+    }
+
+    const OnClickSideMens = () => {
+
+        if (mensSideDropdown.current.classList.contains('hidden')) {
+            mensSideDropdown.current.classList.remove('hidden');
+        }
+        else {
+            mensSideDropdown.current.classList.add('hidden');
+        }
+    }
+
+    const HadleWhenClickOutsideTheMensMenu = (e) => {
+
+        if (!mensDropdown.current.contains(e.target)) {
+            mensDropdown.current.classList.add('hidden');
+        }
+        else {
+            mensDropdown.current.classList.add('hidden');
+        }
+    }
+
+    useEffect(() => {
+        document.addEventListener("click", HadleWhenClickOutsideTheMensMenu, true);
+    }, [])
+
     return (
-        <div className='w-full h-[100px] top-0 bg-gray-200 shadow-2xl fixed flex justify-between items-center pl-10 z-10'>
+        <div className='w-full h-[100px] top-0 bg-gray-200 shadow-2xl fixed flex justify-between items-center pl-10 z-20'>
             <div className=' cursor-pointer'>
                 <img src={logoImage} alt="Logo Image" />
             </div>
 
             <ul className='flex justify-center items-center gap-20 max-md:gap-14 mr-40 max-sm:hidden max-lg:mr-10'>
                 <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Home</li>
-                <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Men</li>
+
+                <div className='relative'>
+
+                    <li id="mens-btn" className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickMens}>Men</li>
+
+                    <div ref={mensDropdown} className='absolute w-32 top-[100%] hidden z-20 py-5 px-3 rounded-xl backdrop-blur-sm bg-transparent'>
+                        <li className='font-bold tracking-wider mb-3 text-teal-500'>T - Shirts</li>
+                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</li>
+                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</li>
+                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</li>
+                    </div>
+
+                </div>
+
                 <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Women</li>
+
                 <li className='tracking-widest font-bold text-lg'>
                     <i className="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
                 </li>
@@ -52,9 +102,22 @@ export const NavBar = () => {
                     <li id='closebtn' className='tracking-widest font-bold text-lg' onClick={OnClickCloseBtn}>
                         <i className="fa-solid fa-xmark text-2xl cursor-pointer"></i>
                     </li>
+
                     <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Home</li>
-                    <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Men</li>
+
+                    <div className='relative'>
+                        <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 ' onClick={OnClickSideMens}>Men</li>
+
+                        <div ref={mensSideDropdown} className='absolute w-36 bg-gray-200 top-[97%] z-20 hidden p-5'>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>T - Shirts</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</li>
+                        </div>
+                    </div>
+
                     <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Women</li>
+
                 </ul>
 
             </div>
