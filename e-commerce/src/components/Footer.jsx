@@ -8,7 +8,7 @@ import payment from '../images/pay.png';
 export const Footer = () => {
     return (
 
-        <div className=' relative px-5 py-16 bg-gradient-to-b from-slate-100 to-slate-200  lg:flex lg:flex-nowrap lg:gap-20'>
+        <div className=' relative px-5 py-16 bg-gradient-to-b from-slate-100 to-slate-200  lg:flex lg:flex-nowrap lg:gap-20 lg:justify-center lg:items-start'>
 
             <div className=' lg:w-1/3'>
                 <div className='mb-5'>
