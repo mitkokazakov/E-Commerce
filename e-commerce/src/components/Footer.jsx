@@ -8,9 +8,9 @@ import payment from '../images/pay.png';
 export const Footer = () => {
     return (
 
-        <div className=' relative px-5 py-16 bg-gradient-to-b from-slate-100 to-slate-200 lg:flex lg:gap-20'>
+        <div className=' relative px-5 py-16 bg-gradient-to-b from-slate-100 to-slate-200  lg:flex lg:flex-nowrap lg:gap-20'>
 
-            <div className='lg:w-1/3'>
+            <div className=' lg:w-1/3'>
                 <div className='mb-5'>
                     <img src={logo} alt="" />
                 </div>
@@ -71,8 +71,8 @@ export const Footer = () => {
                 <p className='text-slate-500 tracking-widest mb-4'>From App Store or Google Play</p>
 
                 <div className='flex flex-col gap-8 mb-5'>
-                    <img className=' border-teal-500 border-2 rounded-xl w-3/5' src={appStore} alt="" />
-                    <img className=' border-teal-500 border-2 rounded-xl w-3/5' src={googlePlay} alt="" />
+                    <img className=' border-teal-500 border-2 rounded-xl w-3/5 sm:w-1/4 md:w-1/4 lg:w-3/5' src={appStore} alt="" />
+                    <img className=' border-teal-500 border-2 rounded-xl w-3/5 sm:w-1/4 md:w-1/4 lg:w-3/5' src={googlePlay} alt="" />
                 </div>
 
                 <p className='text-slate-500 tracking-widest mb-4'>Secured Payments</p>
