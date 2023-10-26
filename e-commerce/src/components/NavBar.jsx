@@ -6,7 +6,6 @@ export const NavBar = () => {
 
     let sideMenu = useRef();
     let mensDropdown = useRef();
-    let mensSideDropdown = useRef();
 
     const OnCLickBurgerMenu = () => {
 
@@ -36,15 +35,7 @@ export const NavBar = () => {
         }
     }
 
-    const OnClickSideMens = () => {
 
-        if (mensSideDropdown.current.classList.contains('hidden')) {
-            mensSideDropdown.current.classList.remove('hidden');
-        }
-        else {
-            mensSideDropdown.current.classList.add('hidden');
-        }
-    }
 
     const HadleWhenClickOutsideTheMensMenu = (e) => {
 
@@ -61,7 +52,7 @@ export const NavBar = () => {
     }, [])
 
     return (
-        <div className='w-full h-[100px] top-0 bg-gray-200 shadow-2xl fixed flex justify-between items-center pl-10 z-20'>
+        <div className='w-full h-[100px] top-0 bg-gray-200 opacity-90 shadow-2xl fixed flex justify-between items-center pl-10 z-20'>
             <div className=' cursor-pointer'>
                 <img src={logoImage} alt="Logo Image" />
             </div>
@@ -105,21 +96,30 @@ export const NavBar = () => {
 
                     <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Home</li>
 
-                    <div className='relative'>
-                        <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 ' onClick={OnClickSideMens}>Men</li>
+                    <li className='group tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Men
 
-                        <div ref={mensSideDropdown} className='absolute w-36 bg-gray-200 top-[97%] z-20 hidden p-5'>
+                        <div className='hidden gap-5 p-5 group-hover:flex group-hover:flex-col'>
                             <li className='font-bold tracking-wider mb-3 text-teal-500'>T - Shirts</li>
                             <li className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</li>
                             <li className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</li>
                             <li className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</li>
                         </div>
-                    </div>
 
-                    <li className='tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Women</li>
+                    </li>
+
+                    <li className='group tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 '>Women
+
+                        <div className='hidden gap-5 p-5 group-hover:flex group-hover:flex-col'>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>T - Shirts</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</li>
+                            <li className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</li>
+                        </div>
+
+
+                    </li>
 
                 </ul>
-
             </div>
         </div>
     )
