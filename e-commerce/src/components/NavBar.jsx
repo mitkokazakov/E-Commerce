@@ -30,9 +30,13 @@ export const NavBar = () => {
 
         if (mensDropdown.current.classList.contains('hidden')) {
             mensDropdown.current.classList.remove('hidden');
+            mensDropdown.current.classList.add('flex');
+            mensDropdown.current.classList.add('flex-col');
         }
         else {
             mensDropdown.current.classList.add('hidden');
+            mensDropdown.current.classList.remove('flex');
+            mensDropdown.current.classList.remove('flex-col');
         }
     }
 
@@ -54,9 +58,11 @@ export const NavBar = () => {
 
     return (
         <div className='w-full h-[100px] top-0 bg-gray-200 opacity-90 shadow-2xl fixed flex justify-between items-center pl-10 z-20'>
-            <div className=' cursor-pointer'>
-                <img src={logoImage} alt="Logo Image" />
-            </div>
+            <Link to="/">
+                <div className=' cursor-pointer'>
+                    <img src={logoImage} alt="Logo Image" />
+                </div>
+            </Link>
 
             <ul className='flex justify-center items-center gap-20 max-md:gap-14 mr-40 max-sm:hidden max-lg:mr-10'>
                 <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Home</li>
@@ -66,10 +72,10 @@ export const NavBar = () => {
                     <li id="mens-btn" className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickMens}>Men</li>
 
                     <div ref={mensDropdown} className='absolute w-32 top-[100%] hidden z-20 py-5 px-3 rounded-xl backdrop-blur-sm bg-transparent'>
-                        <Link className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer'>T - Shirts</Link>
-                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</li>
-                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</li>
-                        <li className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</li>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer'>T - Shirts</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</Link>
                     </div>
 
                 </div>
