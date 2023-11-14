@@ -72,10 +72,10 @@ export const NavBar = () => {
                     <li id="mens-btn" className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickMens}>Men</li>
 
                     <div ref={mensDropdown} className='absolute w-32 top-[100%] hidden z-20 py-5 px-3 rounded-xl backdrop-blur-sm bg-transparent'>
-                        <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer'>T - Shirts</Link>
-                        <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500'>Sweaters</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500'>Jeans</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500'>Jackets</Link>
+                        <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
+                        <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
                         <Outlet/>
                     </div>
 
