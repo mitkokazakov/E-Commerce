@@ -18,7 +18,7 @@ export const MenNavigation = () => {
             </div>
 
             <div>
-                <p className='font-bold tracking-widest text-2xl text-teal-400 text-center'>Men's - {location.state}</p>
+                <p className='font-bold tracking-widest text-2xl text-teal-400 pl-12 text-left'>Men's {'>>'} {location.state}</p>
             </div>
             <Outlet />
         </div>

@@ -7,6 +7,7 @@ export const NavBar = () => {
 
     let sideMenu = useRef();
     let mensDropdown = useRef();
+    let womensDropdown = useRef();
 
     const OnCLickBurgerMenu = () => {
 
@@ -37,6 +38,20 @@ export const NavBar = () => {
             mensDropdown.current.classList.add('hidden');
             mensDropdown.current.classList.remove('flex');
             mensDropdown.current.classList.remove('flex-col');
+        }
+    }
+
+    const OnClickWomen = () => {
+
+        if (womensDropdown.current.classList.contains('hidden')) {
+            womensDropdown.current.classList.remove('hidden');
+            womensDropdown.current.classList.add('flex');
+            womensDropdown.current.classList.add('flex-col');
+        }
+        else {
+            womensDropdown.current.classList.add('hidden');
+            womensDropdown.current.classList.remove('flex');
+            womensDropdown.current.classList.remove('flex-col');
         }
     }
 
@@ -71,17 +86,30 @@ export const NavBar = () => {
 
                     <li id="mens-btn" className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickMens}>Men</li>
 
-                    <div ref={mensDropdown} className='absolute text-center rounded-2xl w-44 top-[100%] right-[50%] translate-x-[50%] hidden z-20 py-5 px-3 bg-slate-300 '>
+                    <div ref={mensDropdown} className='absolute text-center rounded-2xl w-44 top-[100%] right-[50%] translate-x-[50%] hidden z-20 py-5 px-3 bg-slate-300 opacity-90'>
                         <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
                         <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
                         <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
                         <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
-                        <Outlet/>
+                        <Outlet />
                     </div>
 
                 </div>
 
-                <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Women</li>
+                <div className='relative'>
+
+                    <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickWomen}>Women</li>
+
+                    <div ref={womensDropdown} className='absolute text-center rounded-2xl w-44 top-[100%] right-[50%] translate-x-[50%] hidden z-20 py-5 px-3 bg-slate-300 opacity-90'>
+                        <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
+                        <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
+                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
+                        <Outlet />
+                    </div>
+                </div>
+
+
 
                 <li className='tracking-widest font-bold text-lg'>
                     <i className="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
