@@ -67,8 +67,19 @@ export const NavBar = () => {
         }
     }
 
+    const HadleWhenClickOutsideTheWomensMenu = (e) => {
+
+        if (!womensDropdown.current.contains(e.target)) {
+            womensDropdown.current.classList.add('hidden');
+        }
+        else {
+            womensDropdown.current.classList.add('hidden');
+        }
+    }
+
     useEffect(() => {
         document.addEventListener("click", HadleWhenClickOutsideTheMensMenu, true);
+        document.addEventListener("click", HadleWhenClickOutsideTheWomensMenu, true);
     }, [])
 
     return (
