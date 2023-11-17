@@ -9,9 +9,9 @@ export const ShoppingCart = () => {
 
             <div className='flex flex-col gap-10 '>
 
-                <div className='flex gap-2 max-w-44 px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl'>
+                <div className='flex gap-2  px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl relative'>
 
-                    <div className=' w-full h-44 relative'>
+                    <div className=' w-full h-44 relative md:max-w-xs md:h-auto'>
                         <img className='w-full h-full rounded-2xl' src={image} alt="" />
 
                         <div className='w-full h-full z-10 top-0 bg-gradient-to-b from-slate-200 to-slate-400 opacity-10 absolute rounded-2xl'></div>
@@ -23,7 +23,7 @@ export const ShoppingCart = () => {
 
                             <p className='text-lg tracking-widest font-medium'>Cartoon Astrounaut T-Shirt</p>
 
-                            <p className='font-extrabold tracking-widest text-md'>$78</p>
+                            <p className='font-extrabold tracking-widest text-md md:absolute md:right-8 md:top-5 md:text-2xl'>$78</p>
                         </div>
 
                         <p>Size: S</p>
@@ -34,9 +34,9 @@ export const ShoppingCart = () => {
                     </div>
                 </div>
 
-                <div className='flex gap-2 max-w-44 px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl'>
+                <div className='flex gap-2  px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl relative'>
 
-                    <div className='w-full h-44 relative'>
+                    <div className=' w-full h-44 relative md:max-w-xs md:h-auto'>
                         <img className='w-full h-full rounded-2xl' src={image} alt="" />
 
                         <div className='w-full h-full z-10 top-0 bg-gradient-to-b from-slate-200 to-slate-400 opacity-10 absolute rounded-2xl'></div>
@@ -48,31 +48,31 @@ export const ShoppingCart = () => {
 
                             <p className='text-lg tracking-widest font-medium'>Cartoon Astrounaut T-Shirt</p>
 
-                            <p className='font-extrabold tracking-widest text-md'>$78</p>
+                            <p className='font-extrabold tracking-widest text-md md:absolute md:right-8 md:top-5 md:text-2xl'>$78</p>
                         </div>
 
                         <p>Size: S</p>
 
-                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent' type="number" />
+                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent opacity-100' type="number" />
 
-                        <p className='font-medium text-red-600 tracking-widest'> <i className="fa-solid fa-trash-can text-red-600 mr-2"> </i>Remove</p>
+                        <p className='font-medium text-red-600 tracking-widest cursor-pointer'> <i className="fa-solid fa-trash-can text-red-600 mr-2"> </i>Remove</p>
                     </div>
                 </div>
 
             </div>
 
-            <div className='flex flex-col gap-10 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl px-5 py-6'>
+            <div className='flex flex-col gap-10 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl px-5 py-6 md:flex-row md:justify-between'>
 
-                <div className='flex flex-col gap-4'>
+                <div className='flex flex-col gap-4 md:w-1/3 '>
                     <h1 className='font-bold tracking-widest'>Apply coupon</h1>
 
-                    <div className='flex gap-5'>
-                        <input className='border-2 border-teal-500 rounded-lg' type="text" />
+                    <div className='flex gap-5 md:flex-row md:justify-between'>
+                        <input className='border-2 border-teal-500 rounded-lg bg-transparent md:w-full' type="text" />
                         <button className='bg-teal-600 text-white font-bold py-2 px-6 tracking-widest rounded-lg'>Apply</button>
                     </div>
                 </div>
 
-                <div className='flex flex-col border-[1px] border-slate-300 p-3'>
+                <div className='flex flex-col border-[1px] border-slate-300 p-3 md:w-1/2'>
 
                     <h1 className='font-bold tracking-widest mb-3'>Cart Totals</h1>
 
@@ -93,7 +93,7 @@ export const ShoppingCart = () => {
                         </tr>
                     </table>
 
-                    <button className='bg-teal-600 text-white font-bold py-2 px-6 tracking-widest rounded-lg mt-3'>Proceed to checkout</button>
+                    <button className='bg-teal-600 text-white font-bold py-2 px-3 tracking-widest rounded-lg mt-3'>Proceed to checkout</button>
 
                 </div>
 
