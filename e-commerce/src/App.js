@@ -27,10 +27,10 @@ function App() {
           <Route path='tshirts' element={<MenTshirts />} />
           <Route path='sweaters' element={<MenSweaters />} />
         </Route>
+        <Route path='cart' element={<ShoppingCart/>}/>
       </Routes>
 
       <Footer></Footer>
-      <ShoppingCart />
     </div>
   );
 }

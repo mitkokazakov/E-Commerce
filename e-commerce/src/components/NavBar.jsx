@@ -91,7 +91,7 @@ export const NavBar = () => {
             </Link>
 
             <ul className='flex justify-center items-center gap-20 max-md:gap-14 mr-40 max-sm:hidden max-lg:mr-10'>
-                <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Home</li>
+                <Link to="/" className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200'>Home</Link>
 
                 <div className='relative'>
 
@@ -122,9 +122,9 @@ export const NavBar = () => {
 
 
 
-                <li className='tracking-widest font-bold text-lg'>
+                <Link to="cart" className='tracking-widest font-bold text-lg'>
                     <i className="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
-                </li>
+                </Link>
             </ul>
 
             <div className='hidden max-sm:flex max-sm:justify-center max-sm:items-center max-sm:gap-10'>
