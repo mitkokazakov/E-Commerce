@@ -129,7 +129,9 @@ export const NavBar = () => {
 
             <div className='hidden max-sm:flex max-sm:justify-center max-sm:items-center max-sm:gap-10'>
 
-                <i className="fa-solid fa-cart-shopping text-xl cursor-pointer hidden max-sm:text-2xl max-sm:block max-sm:ml-16"></i>
+                <Link to="cart">
+                    <i className="fa-solid fa-cart-shopping text-xl cursor-pointer hidden max-sm:text-2xl max-sm:block max-sm:ml-16"></i>
+                </Link>
 
                 <i id='burger' className="fa-solid fa-bars max-sm:text-2xl max-sm:mr-5 max-sm:block cursor-pointer hidden" onClick={OnCLickBurgerMenu}></i>
             </div>

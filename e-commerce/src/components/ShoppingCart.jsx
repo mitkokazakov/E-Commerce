@@ -11,13 +11,13 @@ export const ShoppingCart = () => {
 
                 <div className='flex gap-2  px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl relative'>
 
-                    <div className=' w-full h-44 relative md:max-w-xs md:h-auto sm:w-1/3'>
+                    <div className=' w-1/2 h-44 relative md:max-w-xs md:h-auto sm:w-1/3'>
                         <img className='w-full h-full rounded-2xl' src={image} alt="" />
 
                         <div className='w-full h-full z-10 top-0 bg-gradient-to-b from-slate-200 to-slate-400 opacity-10 absolute rounded-2xl'></div>
                     </div>
 
-                    <div className='px-2 flex flex-col gap-3'>
+                    <div className='w-1/2 px-2 flex flex-col gap-3'>
                         <div className='flex flex-col gap-3'>
                             <h5 className='tracking-widest'>Adidas</h5>
 
@@ -36,13 +36,13 @@ export const ShoppingCart = () => {
 
                 <div className='flex gap-2  px-4 py-4 bg-gradient-to-b from-slate-100 to-slate-200 rounded-xl relative'>
 
-                    <div className=' w-full h-44 relative md:max-w-xs md:h-auto sm:w-1/3'>
+                    <div className=' w-1/2 h-44 relative md:max-w-xs md:h-auto sm:w-1/3'>
                         <img className='w-full h-full rounded-2xl' src={image} alt="" />
 
                         <div className='w-full h-full z-10 top-0 bg-gradient-to-b from-slate-200 to-slate-400 opacity-10 absolute rounded-2xl'></div>
                     </div>
 
-                    <div className='px-2 flex flex-col gap-3'>
+                    <div className='w-1/2 px-2 flex flex-col gap-3'>
                         <div className='flex flex-col gap-3'>
                             <h5 className='tracking-widest'>Adidas</h5>
 
