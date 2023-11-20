@@ -2,15 +2,13 @@ import './App.css';
 import { Footer } from './components/Footer';
 import { HomePage } from './components/HomePage';
 import { MenNavigation } from './components/MenNavigation';
-import { MenProducts } from './components/MenProducts';
 import { MenSweaters } from './components/MenSweaters';
 import { MenTshirts } from './components/MenTshirts';
 import { NavBar } from './components/NavBar';
+import { ProductDetails } from './components/ProductDetails';
 import { ShoppingCart } from './components/ShoppingCart';
 
 import { Routes, Route } from 'react-router-dom';
-
-import { useLocation } from 'react-router-dom';
 
 
 function App() {
@@ -31,6 +29,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+      <ProductDetails />
     </div>
   );
 }

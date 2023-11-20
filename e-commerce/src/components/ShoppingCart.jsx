@@ -28,7 +28,7 @@ export const ShoppingCart = () => {
 
                         <p>Size: S</p>
 
-                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent opacity-100' type="number" />
+                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent opacity-100 md:w-1/5' type="number" />
 
                         <p className='font-medium text-red-600 tracking-widest cursor-pointer'> <i className="fa-solid fa-trash-can text-red-600 mr-2"> </i>Remove</p>
                     </div>
@@ -53,7 +53,7 @@ export const ShoppingCart = () => {
 
                         <p>Size: S</p>
 
-                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent opacity-100' type="number" />
+                        <input className='w-1/2 border-2 text-center py-1 border-teal-600 bg-transparent opacity-100 md:w-1/5' type="number" />
 
                         <p className='font-medium text-red-600 tracking-widest cursor-pointer'> <i className="fa-solid fa-trash-can text-red-600 mr-2"> </i>Remove</p>
                     </div>
