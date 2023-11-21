@@ -100,8 +100,8 @@ export const NavBar = () => {
                     <div ref={mensDropdown} className='absolute text-center rounded-2xl w-44 top-[100%] right-[50%] translate-x-[50%] hidden z-20 py-5 px-3 bg-slate-300 opacity-90'>
                         <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
                         <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
+                        <Link to="men/jeans" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
+                        <Link to="men/jackets" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
                         <Outlet />
                     </div>
 
@@ -112,10 +112,10 @@ export const NavBar = () => {
                     <li className='transition-all duration-200 tracking-widest font-bold text-lg cursor-pointer hover:text-teal-500 relative after:absolute after:w-1/2 after:h-[4px] hover:after:bg-teal-500 after:-bottom-1 after:left-0 after:transition-all after:duration-200' onClick={OnClickWomen}>Women</li>
 
                     <div ref={womensDropdown} className='absolute text-center rounded-2xl w-44 top-[100%] right-[50%] translate-x-[50%] hidden z-20 py-5 px-3 bg-slate-300 opacity-90'>
-                        <Link to="men/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
-                        <Link to="men/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Jeans</Link>
-                        <Link to="men" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Jackets</Link>
+                        <Link to="women/tshirts" className='font-bold tracking-wider mb-3 text-teal-500 cursor-pointer' state="T - Shirts">T - Shirts</Link>
+                        <Link to="women/sweaters" className='font-bold tracking-wider mb-3 text-teal-500' state="Sweaters">Sweaters</Link>
+                        <Link to="women/hats" className='font-bold tracking-wider mb-3 text-teal-500' state="Jeans">Hats</Link>
+                        <Link to="women/scarfs" className='font-bold tracking-wider mb-3 text-teal-500' state="Jackets">Scarfs</Link>
                         <Outlet />
                     </div>
                 </div>
