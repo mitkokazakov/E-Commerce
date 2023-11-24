@@ -1,6 +1,11 @@
 import React from 'react'
 
-export const SingleProduct = ({imageSource}) => {
+export const SingleProduct = ({imageSource, productId}) => {
+
+    const OnClickCartIcon = () => {
+        console.log(productId);
+    }
+
     return (
 
         <div className='border-slate-200 border-2 rounded-2xl shadow-xl bg-gradient-to-b from-slate-100 to-slate-200 flex flex-col gap-5 px-5 py-5 w-full md:w-2/5 lg:w-[23%] hover:scale-105 transition-all duration-500'>
@@ -20,7 +25,7 @@ export const SingleProduct = ({imageSource}) => {
                 <div className='flex justify-between items-center mt-5'>
                     <p className='text-teal-600 font-bold tracking-widest'>$78</p>
 
-                    <div className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
+                    <div onClick={OnClickCartIcon} className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
                         <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
                     </div>
                 </div>
