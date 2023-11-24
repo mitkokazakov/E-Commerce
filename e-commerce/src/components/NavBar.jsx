@@ -122,8 +122,9 @@ export const NavBar = () => {
 
 
 
-                <Link to="cart" className='tracking-widest font-bold text-lg'>
+                <Link to="cart" className='tracking-widest font-bold text-lg relative'>
                     <i className="fa-solid fa-cart-shopping text-xl cursor-pointer"></i>
+                    <div className='absolute rounded-[50%] bg-teal-500 w-4 h-4 p-[10px] -top-2 -right-2 opacity- flex justify-center items-center text-white font-bold text-[10px]'>2</div>
                 </Link>
             </ul>
 
