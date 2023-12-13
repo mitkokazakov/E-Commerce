@@ -39,10 +39,10 @@
       "target": "api::category.category",
       "inversedBy": "products"
     },
-    "sizes": {
+    "size_products": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::size.size"
+      "target": "api::size-product.size-product"
     }
   }
 }

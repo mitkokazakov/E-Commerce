@@ -11,9 +11,33 @@ import { ShoppingCart } from './components/ShoppingCart';
 import { Routes, Route } from 'react-router-dom';
 import { WomenNavigation } from './components/WomenNavigation';
 import { WomenScarfs } from './components/WomenScarfs';
+import { useEffect, useState } from 'react';
 
+import { requestAPI } from './requests';
 
 function App() {
+
+    const [data,setData] = useState();
+
+    useEffect( ()=> {
+
+      let fetchData = async () =>{
+        let result = await requestAPI.get("/products?populate=*");
+
+        setData(result.data.data[0]);
+      }
+
+
+      fetchData();
+
+      
+
+      //updateData();
+      
+    },[])
+
+    //console.log(data);
+
 
 
 

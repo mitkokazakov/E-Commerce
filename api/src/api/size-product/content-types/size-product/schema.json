@@ -4,7 +4,8 @@
   "info": {
     "singularName": "size-product",
     "pluralName": "size-products",
-    "displayName": "SizeProduct"
+    "displayName": "SizeProduct",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,10 +20,11 @@
       "relation": "oneToMany",
       "target": "api::product.product"
     },
-    "sizes": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::size.size"
+    "ProductIdent": {
+      "type": "string"
+    },
+    "SizeValue": {
+      "type": "string"
     }
   }
 }

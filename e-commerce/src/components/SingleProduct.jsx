@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const SingleProduct = ({imageSource, productId}) => {
+export const SingleProduct = ({imageSource, productId, title, price}) => {
 
     const OnClickCartIcon = () => {
         console.log(productId);
@@ -20,10 +20,10 @@ export const SingleProduct = ({imageSource, productId}) => {
 
                 <p className='tracking-[2px] text-gray-500 font-bold'>Adidas</p>
 
-                <h3 className='tracking-[2px] text-black font-bold cursor-pointer'>Cartoon Astronaut T-shirts</h3>
+                <h3 className='tracking-[2px] text-black font-bold cursor-pointer'>{title}</h3>
 
                 <div className='flex justify-between items-center mt-5'>
-                    <p className='text-teal-600 font-bold tracking-widest'>$78</p>
+                    <p className='text-teal-600 font-bold tracking-widest'>${price}</p>
 
                     <div onClick={OnClickCartIcon} className=' rounded-full p-2 bg-teal-100 cursor-pointer'>
                         <i className="fa-solid fa-cart-shopping text-xl text-teal-600"></i>
