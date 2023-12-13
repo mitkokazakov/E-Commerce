@@ -36,7 +36,7 @@ function App() {
       
     },[])
 
-    //console.log(data);
+
 
 
 
@@ -50,6 +50,7 @@ function App() {
 
         <Route path='/men' element={<MenNavigation />} >
           <Route path='tshirts' element={<MenTshirts />} />
+          <Route path='tshirts/productDetails/:productId' element={<ProductDetails/>}/>
           <Route path='sweaters' element={<MenSweaters />} />
         </Route>
 
@@ -60,11 +61,13 @@ function App() {
           <Route path='scarfs' element={<WomenScarfs />} />
         </Route>
 
+        
+
         <Route path='cart' element={<ShoppingCart/>}/>
       </Routes>
 
       <Footer></Footer>
-      <ProductDetails />
+      {/* <ProductDetails /> */}
     </div>
   );
 }

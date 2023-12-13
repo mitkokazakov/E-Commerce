@@ -2,7 +2,41 @@ import React from 'react'
 
 import image from '../images/product3.jpg';
 
+import { useState,useEffect } from 'react';
+
+import { useParams } from 'react-router-dom';
+
+import { requestAPI } from '../requests';
+
 export const ProductDetails = () => {
+
+    const [product, setProduct] = useState();
+    const [sizes, setSizes] = useState();
+
+    let params = useParams();
+
+  useEffect(() => {
+
+    let fetchSingleProduct = async () => {
+      let result = await requestAPI.get(`/products?populate[category]=Category&filters[ProductId][$eq]=${params.productId}`);
+
+      setProduct(result.data.data[0]);
+    }
+
+    let fetchSingleProductSizes = async () => {
+        let result = await requestAPI.get(`/size-products?filters[ProductIdent][$eq]=${params.productId}`);
+  
+        setSizes(result.data.data);
+      }
+
+    fetchSingleProduct();
+    fetchSingleProductSizes();
+
+
+  }, [])
+
+console.log(product);
+
     return (
         <div className='flex flex-col gap-5 px-4 py-6 md:flex-row md:gap-6'>
 
@@ -38,19 +72,19 @@ export const ProductDetails = () => {
             </div>
 
             <div className='flex flex-col gap-5'>
-                <p className='font-bold tracking-widest'>Home / T-Shirts</p>
+                <p className='font-bold tracking-widest'>Adidas</p>
 
-                <h1 className='text-xl font-bold tracking-widest'>Cartoon Astronaut T-Shirt</h1>
+                <h1 className='text-xl font-bold tracking-widest'>{product?.attributes?.Title}</h1>
 
                 <h1 className='text-2xl font-extrabold tracking-widest'>$ 139.00</h1>
 
                 <div className='flex flex-col gap-5'>
                     <select className='border-[1px] border-teal-500 text-center py-2 px-4 w-2/5'>
                         <option className='text-center' value="0">Select Size</option>
-                        <option value="0">Small</option>
-                        <option value="0">Medium</option>
-                        <option value="0">Large</option>
-                        <option value="0">Extra Large</option>
+                       
+                        {
+                            sizes && (sizes.map((s,index) => {return <option value={index}>{s.attributes.SizeValue}</option>}))
+                        }
                     </select>
 
                     <div className='flex gap-5'>
