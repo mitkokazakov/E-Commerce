@@ -14,6 +14,9 @@ import { WomenScarfs } from './components/WomenScarfs';
 import { useEffect, useState } from 'react';
 
 import { requestAPI } from './requests';
+import { MenProducts } from './components/MenProducts';
+import { MenJackets } from './components/MenJackets';
+import { MenJeans } from './components/MenJeans';
 
 function App() {
 
@@ -30,9 +33,6 @@ function App() {
 
       fetchData();
 
-      
-
-      //updateData();
       
     },[])
 
@@ -52,6 +52,11 @@ function App() {
           <Route path='tshirts' element={<MenTshirts />} />
           <Route path='tshirts/productDetails/:productId' element={<ProductDetails/>}/>
           <Route path='sweaters' element={<MenSweaters />} />
+          <Route path='sweaters/productDetails/:productId' element={<ProductDetails/>}/>
+          <Route path='jackets' element={<MenJackets />} />
+          <Route path='jackets/productDetails/:productId' element={<ProductDetails/>}/>
+          <Route path='jeans' element={<MenJeans/>} />
+          <Route path='jeans/productDetails/:productId' element={<ProductDetails/>}/>
         </Route>
 
         <Route path='/women' element={<WomenNavigation />} >
@@ -67,7 +72,6 @@ function App() {
       </Routes>
 
       <Footer></Footer>
-      {/* <ProductDetails /> */}
     </div>
   );
 }

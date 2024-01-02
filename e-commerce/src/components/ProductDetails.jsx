@@ -76,7 +76,7 @@ console.log(product);
 
                 <h1 className='text-xl font-bold tracking-widest'>{product?.attributes?.Title}</h1>
 
-                <h1 className='text-2xl font-extrabold tracking-widest'>$ 139.00</h1>
+                <h1 className='text-2xl font-extrabold tracking-widest'>$ {product?.attributes?.Price}</h1>
 
                 <div className='flex flex-col gap-5'>
                     <select className='border-[1px] border-teal-500 text-center py-2 px-4 w-2/5'>
