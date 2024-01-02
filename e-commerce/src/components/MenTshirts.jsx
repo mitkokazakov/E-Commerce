@@ -14,7 +14,7 @@ export const MenTshirts = () => {
   useEffect(() => {
 
     let fetchData = async () => {
-      let result = await requestAPI.get("/products?populate=*");
+      let result = await requestAPI.get(`/products?populate[category]=Category&filters[MaleFemale][$eq]=Male&filters[category][CategoryName][$eq]=T-Shirts`);
 
       setData(result.data.data);
     }

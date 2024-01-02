@@ -2,6 +2,7 @@ import React from 'react'
 
 import product1 from '../images/product1.jpg';
 import { SingleProduct } from './SingleProduct';
+import { FeaturedProducts } from './FeaturedProducts';
 
 export const FeaturedAndArrivals = ({title, descr}) => {
     return (
@@ -15,10 +16,10 @@ export const FeaturedAndArrivals = ({title, descr}) => {
 
             <div className=' flex flex-wrap justify-center items-center gap-5 px-8 pb-10'>
 
-                <SingleProduct imageSource={product1} />                 
-                <SingleProduct imageSource={product1} />                 
-                <SingleProduct imageSource={product1} />                 
-                <SingleProduct imageSource={product1} />
+                <FeaturedProducts />
+                <FeaturedProducts />
+                <FeaturedProducts />
+                <FeaturedProducts />
 
                 
 
