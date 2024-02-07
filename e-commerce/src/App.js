@@ -21,6 +21,7 @@ import { MenJeans } from './components/MenJeans';
 function App() {
 
     const [data,setData] = useState();
+    const [cart,setCart] = useState([]);
 
     useEffect( ()=> {
 
@@ -50,9 +51,9 @@ function App() {
 
         <Route path='/men' element={<MenNavigation />} >
           <Route path='tshirts' element={<MenTshirts />} />
-          <Route path='tshirts/productDetails/:productId' element={<ProductDetails/>}/>
+          <Route path='tshirts/productDetails/:productId' element={<ProductDetails cart={cart}/>}/>
           <Route path='sweaters' element={<MenSweaters />} />
-          <Route path='sweaters/productDetails/:productId' element={<ProductDetails/>}/>
+          <Route path='sweaters/productDetails/:productId' element={<ProductDetails cart={cart}/>}/>
           <Route path='jackets' element={<MenJackets />} />
           <Route path='jackets/productDetails/:productId' element={<ProductDetails/>}/>
           <Route path='jeans' element={<MenJeans/>} />
@@ -68,7 +69,7 @@ function App() {
 
         
 
-        <Route path='cart' element={<ShoppingCart/>}/>
+        <Route path='cart' element={<ShoppingCart cart={cart}/>}/>
       </Routes>
 
       <Footer></Footer>

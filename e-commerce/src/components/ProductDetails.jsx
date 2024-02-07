@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 
 import { requestAPI } from '../requests';
 
-export const ProductDetails = () => {
+export const ProductDetails = ({cart}) => {
 
     const [product, setProduct] = useState();
     const [sizes, setSizes] = useState();
@@ -35,7 +35,10 @@ export const ProductDetails = () => {
 
   }, [])
 
-console.log(product);
+  function AddToCart(){
+    cart.push(params.productId);
+  }
+
 
     return (
         <div className='flex flex-col gap-5 px-4 py-6 md:flex-row md:gap-6'>
@@ -90,7 +93,7 @@ console.log(product);
                     <div className='flex gap-5'>
                         <input className='border-[1px] border-teal-500 text-center py-2 px-4 w-1/6 md:w-1/4 lg:w-1/6' type="number" name="" id="" />
 
-                        <button className='bg-teal-600 text-white tracking-widest font-bold px-3 py-2 rounded-m '>Add to Cart</button>
+                        <button onClick={AddToCart} className='bg-teal-600 text-white tracking-widest font-bold px-3 py-2 rounded-m '>Add to Cart</button>
                     </div>
                 </div>
 

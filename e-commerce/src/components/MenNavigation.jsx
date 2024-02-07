@@ -5,7 +5,6 @@ export const MenNavigation = () => {
 
     let location = useLocation();
 
-    console.log(location.state);
 
     return (
 
